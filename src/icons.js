@@ -1,6 +1,30 @@
 import {AiFillPlusSquare} from "react-icons/ai"
 import {AiFillHeart} from "react-icons/ai"
 import {BiSolidDownload} from "react-icons/bi"
+import { MdSkipNext } from "react-icons/md";
+import { MdSkipPrevious } from "react-icons/md";
+import { IoIosShuffle } from "react-icons/io";
+import { IoIosRepeat } from "react-icons/io";
+import { MdOutlineQueueMusic } from "react-icons/md";
+import { MdDevices } from "react-icons/md";
+import { MdFullscreen } from "react-icons/md";
+import { MdPictureInPictureAlt } from "react-icons/md";
+import { CiHeart } from "react-icons/ci";
+import { FaVolumeMute } from "react-icons/fa";
+import { IoVolumeHigh } from "react-icons/io5";
+import { FaVolumeLow } from "react-icons/fa6";
+import { IoVolumeMediumSharp } from "react-icons/io5";
+import { FaPlay } from "react-icons/fa6";
+import { FaPause } from "react-icons/fa";
+import { PiMicrophoneStageBold } from "react-icons/pi";
+
+
+
+
+
+
+
+
 
 const HomeIcon = ({size}) => {
     return (
@@ -86,10 +110,141 @@ const NetxIcon = ({size}) => {
     )
 }
 
+const SkipNextIcon = ({size}) => {
+   return (
+    <div>
+       <MdSkipNext size = {size} />
+    </div>
+   ) 
+}
 
+const SkipPrevIcon = ({size}) => {
+   return (
+    <div>
+<MdSkipPrevious size = {size} />
+    </div>
+   ) 
 
+}
 
+const ShuffleIcon = ({size}) => {
+   return (
+    <div>
+<IoIosShuffle size={size} />
+    </div>
+   ) 
+}
 
+const RepeatIcon = ({size}) => {
+   return (
+    <div>
+<IoIosRepeat size={size} />
+    </div>
+   ) 
+
+}
+
+const QueueIcon = ({size}) => {
+  return (
+    <div>
+<MdOutlineQueueMusic size={size} />
+    </div>
+  ) 
+}
+
+const DeviceIcon = ({size}) => {
+   return (
+    <div>
+<MdDevices size={size} />
+    </div>
+   ) 
+ }
+ 
+
+ const FullScreenIcon = ({size}) => {
+   return (
+    <div>
+<MdFullscreen size={size} />
+    </div>
+   ) 
+ }
+
+ const PictureInPicture = ({size}) => {
+   return (
+    <div>
+ <MdPictureInPictureAlt size={size}  />
+    </div>
+   )
+ }
+ 
+ const HeartNoFill = ({size}) => {
+   return (
+    <div>
+<CiHeart size={size} />
+    </div>
+   ) 
+ }
+
+ const VolumeMute = ({size}) => {
+   return (
+    <div>
+<FaVolumeMute size={size} />
+    </div>
+   ) 
+ }
+
+ const VolumeHigh = ({size}) => {
+   return (
+    <div>
+<IoVolumeHigh size={size} />
+    </div>
+   ) 
+ }
+ 
+ const VolumeNormal = ({size}) => {
+   return (
+    <div>
+<IoVolumeMediumSharp size={size} />
+    </div>
+   ) 
+ }
+
+ const VolumeLow = ({size}) => {
+   return (
+    <div>
+<FaVolumeLow size={size} />
+    </div>
+   ) 
+ }
+
+ 
+ const Play = ({size}) => {
+    return (
+     <div>
+       <FaPlay size={size} />
+     </div>
+    ) 
+  }
+ 
+  const Pause = ({size}) => {
+    return (
+     <div>
+       <FaPause size={size} />
+     </div>
+    ) 
+  }
+ 
+   
+  const Microphone = ({size}) => {
+    return (
+     <div>
+       <PiMicrophoneStageBold size={size} />
+     </div>
+    ) 
+  }
+ 
+ 
+ 
 
 
 const Icon = ({name,size = 24}) =>{
@@ -101,7 +256,24 @@ const Icon = ({name,size = 24}) =>{
         heart:HeartIcon,
         download:DownloadIcon,
         prev:PrevIcon,
-        next:NetxIcon
+        next:NetxIcon,
+        skipnext:SkipNextIcon,
+        skipprev:SkipPrevIcon,
+        shuffle:ShuffleIcon,
+        repeat:RepeatIcon,
+        queue:QueueIcon,
+        device:DeviceIcon,
+        fullscreen:FullScreenIcon,
+        pictureinpicture:PictureInPicture,
+        heartnofill:HeartNoFill,
+        volumemute:VolumeMute,
+        volumehigh:VolumeHigh,
+        volumenormal:VolumeNormal,
+        volumelow:VolumeLow,
+        play:Play,
+        pause:Pause,
+        microphone:Microphone
+
     }
 
     const Component = icons[name]
